@@ -1,7 +1,7 @@
 from django.db import models
 
 class Desarrollo(models.Model):
-    nombre_desarrollo = models.CharField(max_length=100)
+    nombre_desarrollo = models.CharField(max_length=100, unique=True)
     ubicacion_desarrollo = models.CharField(max_length=150)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
 
